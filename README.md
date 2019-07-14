@@ -1,2 +1,7 @@
 # P&C Ontology
 The Property &amp; Casualty (P&amp;C) Ontology represents the P&amp;C data model that addresses the data management needs of the P&amp;C insurance community. OMG&apos;s (Object Management Group) Model Driven Architecture principles and related standards have been utilized in order to construct the data model. Also, existing P&amp;C industry standards (e.g., IBM&apos;s IAA) have been picked out as a source for the proposed P&amp;C Business Glossary and associated models. Among the components of the P&amp;C data model, there are the entities, attributes and relationships. The main objects of the data model are the Entities. An Entity represents a person, organization, place, thing, or concept of interest to the enterprise. Next, an Entity can express a very broad and varied set of instance data, or it can be very specific. Α Relationship should be a verb or a verb phrase that is always established between two entities, the &apos;Parent Entity&apos; and the &apos;Child Entity&apos;. Attributes are usually defined within an entity and is considered as a property or descriptor of this entity.
+
+Please cite as:  
+`Koutsomitropoulos, D. A., & Kalou, A. K. (2017). A standards-based ontology and support for Big Data Analytics in the insurance industry. ICT Express, 3(2), 57-61.`
+
+`Kalou, A. K., & Koutsomitropoulos, D. A. (2016, October). An Infrastructure and Approach for Inferring Knowledge Over Big Data in the Vehicle Insurance Industry. In INNS Conference on Big Data (pp. 293-303). Springer, Cham.`
