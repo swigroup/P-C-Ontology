@@ -1,0 +1,1700 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.hpclab.ceid.upatras.gr/omg#"
+     xml:base="http://www.hpclab.ceid.upatras.gr/omg"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:omg="http://www.hpclab.ceid.upatras.gr/omg#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.hpclab.ceid.upatras.gr/omg">
+        <dc:contributor xml:lang="en">Aikaterini Kalou</dc:contributor>
+        <dc:contributor xml:lang="en">Dimitrios Koutsomitropoulos</dc:contributor>
+        <dc:description xml:lang="en">The Property &amp; Casualty (P&amp;C) Ontology represents the P&amp;C data model that addresses the data management needs of the P&amp;C insurance community. OMG&apos;s (Object Management Group) Model Driven Architecture principles and related standards have been utilized in order to construct the data model. Also, existing P&amp;C industry standards (e.g., IBM&apos;s IAA) have been picked out as a source for the proposed P&amp;C Business Glossary and associated models. Among the components of the P&amp;C data model, there are the entities, attributes and relationships. The main objects of the data model are the Entities. An Entity represents a person, organization, place, thing, or concept of interest to the enterprise. Next, an Entity can express a very broad and varied set of instance data, or it can be very specific. Α Relationship should be a verb or a verb phrase that is always established between two entities, the &apos;Parent Entity&apos; and the &apos;Child Entity&apos;. Attributes are usually defined within an entity and is considered as a property or descriptor of this entity.</dc:description>
+        <dc:publisher xml:lang="en">HPCLab, University of Patras</dc:publisher>
+        <dc:subject>Insurance</dc:subject>
+        <dc:title>P&amp;C Ontology</dc:title>
+        <dc:title xml:lang="en">P&amp;C Ontology</dc:title>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.0</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/contributor">
+        <rdfs:label>dc:contributor</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/publisher -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/publisher"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/subject -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/subject"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#assignedResponsibilityThrough -->
+
+    <owl:ObjectProperty rdf:about="http://www.hpclab.ceid.upatras.gr/omg#assignedResponsibilityThrough">
+        <rdfs:domain rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Party"/>
+        <rdfs:range rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#ClaimPartyRole"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#claimAssessment -->
+
+    <owl:ObjectProperty rdf:about="http://www.hpclab.ceid.upatras.gr/omg#claimAssessment">
+        <rdfs:domain rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Claim"/>
+        <rdfs:range rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Assessment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#claimResultsIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.hpclab.ceid.upatras.gr/omg#claimResultsIn">
+        <rdfs:domain rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#ClaimOffer"/>
+        <rdfs:range rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#ClaimAmount"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#claimRoleInvolvedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.hpclab.ceid.upatras.gr/omg#claimRoleInvolvedIn">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#ClaimPartyRole"/>
+        <rdfs:range rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Claim"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#contains -->
+
+    <owl:ObjectProperty rdf:about="http://www.hpclab.ceid.upatras.gr/omg#contains">
+        <rdfs:domain rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#ClaimFolder"/>
+        <rdfs:range rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#ClaimDocument"/>
+        <rdfs:range rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#ClaimOffer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#definedForPolicyIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.hpclab.ceid.upatras.gr/omg#definedForPolicyIn">
+        <rdfs:domain rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Coverage"/>
+        <rdfs:range rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#PolicyCoverageDetail"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#documentedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.hpclab.ceid.upatras.gr/omg#documentedIn">
+        <rdfs:domain rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Claim"/>
+        <rdfs:range rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#ClaimFolder"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#hasAgreementRole -->
+
+    <owl:ObjectProperty rdf:about="http://www.hpclab.ceid.upatras.gr/omg#hasAgreementRole">
+        <rdfs:domain rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#PartyRole"/>
+        <rdfs:range rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Agreement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#hasClaimRole -->
+
+    <owl:ObjectProperty rdf:about="http://www.hpclab.ceid.upatras.gr/omg#hasClaimRole">
+        <rdfs:domain rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#ClaimPartyRole"/>
+        <rdfs:range rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#ClaimRole"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#hasFirm -->
+
+    <owl:ObjectProperty rdf:about="http://www.hpclab.ceid.upatras.gr/omg#hasFirm">
+        <rdfs:domain rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Automobile"/>
+        <rdfs:range rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#AutomobileManufacturer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#hasInsurance -->
+
+    <owl:ObjectProperty rdf:about="http://www.hpclab.ceid.upatras.gr/omg#hasInsurance">
+        <owl:inverseOf rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#isInsuranceOf"/>
+        <rdfs:domain rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#InsurableObject"/>
+        <rdfs:range rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Agreement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#hasInsured -->
+
+    <owl:ObjectProperty rdf:about="http://www.hpclab.ceid.upatras.gr/omg#hasInsured">
+        <owl:inverseOf rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#isInsuredBy"/>
+        <rdfs:domain rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Person"/>
+        <rdfs:range rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Agreement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#hasModel -->
+
+    <owl:ObjectProperty rdf:about="http://www.hpclab.ceid.upatras.gr/omg#hasModel">
+        <rdfs:domain rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Automobile"/>
+        <rdfs:range rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#AutomobileModel"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#hasRole -->
+
+    <owl:ObjectProperty rdf:about="http://www.hpclab.ceid.upatras.gr/omg#hasRole">
+        <rdfs:domain rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Person"/>
+        <rdfs:range rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#PartyRole"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#involvedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.hpclab.ceid.upatras.gr/omg#involvedIn">
+        <rdfs:domain rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#InsurableObject"/>
+        <rdfs:range rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Claim"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#isCoveredAsDefinedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.hpclab.ceid.upatras.gr/omg#isCoveredAsDefinedIn">
+        <rdfs:domain rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#InsurableObject"/>
+        <rdfs:range rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#PolicyCoverageDetail"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#isEmployedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.hpclab.ceid.upatras.gr/omg#isEmployedBy">
+        <rdfs:domain rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Person"/>
+        <rdfs:range rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Organization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#isInsuranceOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.hpclab.ceid.upatras.gr/omg#isInsuranceOf">
+        <rdfs:domain rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Agreement"/>
+        <rdfs:range rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#InsurableObject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#isInsuredBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.hpclab.ceid.upatras.gr/omg#isInsuredBy">
+        <rdfs:domain rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Agreement"/>
+        <rdfs:range rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#isOwnerOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.hpclab.ceid.upatras.gr/omg#isOwnerOf">
+        <rdfs:domain rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Party"/>
+        <rdfs:range rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#InsurableObject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#isProducedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.hpclab.ceid.upatras.gr/omg#isProducedBy">
+        <rdfs:domain rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#AutomobileModel"/>
+        <rdfs:range rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#AutomobileManufacturer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#pricingDetermines -->
+
+    <owl:ObjectProperty rdf:about="http://www.hpclab.ceid.upatras.gr/omg#pricingDetermines">
+        <rdfs:domain rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#PolicyCoverageDetail"/>
+        <rdfs:range rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#PolicyAmount"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#resultsIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.hpclab.ceid.upatras.gr/omg#resultsIn">
+        <rdfs:domain rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Assessment"/>
+        <rdfs:range rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#AssessmentResult"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#settlementResultsIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.hpclab.ceid.upatras.gr/omg#settlementResultsIn">
+        <rdfs:domain rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Claim"/>
+        <rdfs:range rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#ClaimAmount"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#specifiedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.hpclab.ceid.upatras.gr/omg#specifiedIn">
+        <owl:inverseOf rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#specifies"/>
+        <rdfs:domain rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Policy"/>
+        <rdfs:range rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#PolicyCoverageDetail"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#specifies -->
+
+    <owl:ObjectProperty rdf:about="http://www.hpclab.ceid.upatras.gr/omg#specifies">
+        <rdfs:domain rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#PolicyCoverageDetail"/>
+        <rdfs:range rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#PolicyDeductible"/>
+        <rdfs:range rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#PolicyLimit"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#assessmentDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://www.hpclab.ceid.upatras.gr/omg#assessmentDescription">
+        <rdfs:domain rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Assessment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#automobileCountryCode -->
+
+    <owl:DatatypeProperty rdf:about="http://www.hpclab.ceid.upatras.gr/omg#automobileCountryCode">
+        <rdfs:domain rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Automobile"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#automobileNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.hpclab.ceid.upatras.gr/omg#automobileNumber">
+        <rdfs:domain rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Automobile"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#beginDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.hpclab.ceid.upatras.gr/omg#beginDate">
+        <rdfs:domain rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Agreement"/>
+        <rdfs:domain rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Assessment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#certificationNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.hpclab.ceid.upatras.gr/omg#certificationNumber">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#documentID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.hpclab.ceid.upatras.gr/omg#documentID">
+        <rdfs:domain rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#ClaimDocument"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#drivingLicenceNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.hpclab.ceid.upatras.gr/omg#drivingLicenceNumber">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#endDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.hpclab.ceid.upatras.gr/omg#endDate">
+        <rdfs:domain rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Agreement"/>
+        <rdfs:domain rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Assessment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#folderID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.hpclab.ceid.upatras.gr/omg#folderID">
+        <rdfs:domain rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#ClaimFolder"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#hasAmount -->
+
+    <owl:DatatypeProperty rdf:about="http://www.hpclab.ceid.upatras.gr/omg#hasAmount">
+        <rdfs:domain rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Money"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#hasDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://www.hpclab.ceid.upatras.gr/omg#hasDescription">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#insurerLicenceNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.hpclab.ceid.upatras.gr/omg#insurerLicenceNumber">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#organizationCode -->
+
+    <owl:DatatypeProperty rdf:about="http://www.hpclab.ceid.upatras.gr/omg#organizationCode">
+        <rdfs:domain rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Organization"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#personFirstName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.hpclab.ceid.upatras.gr/omg#personFirstName">
+        <rdfs:domain rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#personID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.hpclab.ceid.upatras.gr/omg#personID">
+        <rdfs:domain rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#personLastName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.hpclab.ceid.upatras.gr/omg#personLastName">
+        <rdfs:domain rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#productionDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.hpclab.ceid.upatras.gr/omg#productionDate">
+        <rdfs:domain rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Automobile"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#Account -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Account">
+        <rdfs:comment xml:lang="en">An Account is a formal business arrangement providing for regular dealings or services such as multiple policies and contracts.  Conceptually this a means of combining all business for a customer or marketplace relationship.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#AccountRole -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#AccountRole">
+        <rdfs:subClassOf rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#PartyRole"/>
+        <rdfs:comment xml:lang="en">Account Role relates a Party to a Role within an Account.  </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#Activity -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Activity">
+        <rdfs:comment xml:lang="en">An Activity is any part of an operation or procedure that impacts the business and related data.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#Agreement -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Agreement">
+        <rdfs:comment xml:lang="en">An Agreement is language that defines the terms and conditions of a legally binding contract among the identified parties, ordinarily leading to a contract. Examples; policy, reinsurance agreement, staff agreement.   Agreement is a focal point for the data model because it is a  ΘΌSupertype Θέ for all insurance, financial, and service contracts.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#AlreadySettled -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#AlreadySettled"/>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#Assessment -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Assessment"/>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#AssessmentResult -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#AssessmentResult"/>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#AssumedClaimAmount -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#AssumedClaimAmount">
+        <rdfs:subClassOf rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#ClaimAmount"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#AssumedPolicyAmount -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#AssumedPolicyAmount">
+        <rdfs:subClassOf rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#PolicyAmount"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#Authorization -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Authorization">
+        <rdfs:subClassOf rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#AssessmentResult"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#Automobile -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Automobile">
+        <rdfs:subClassOf rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Vehicle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#AutomobileManufacturer -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#AutomobileManufacturer">
+        <rdfs:subClassOf rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#AutomobileModel -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#AutomobileModel"/>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#BMWModels -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#BMWModels">
+        <rdfs:subClassOf rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#AutomobileModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#Boat -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Boat">
+        <rdfs:subClassOf rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Vehicle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#Bus -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Bus">
+        <rdfs:subClassOf rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Vehicle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#CededClaimAmount -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#CededClaimAmount">
+        <rdfs:subClassOf rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#ClaimAmount"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#CededPolicyAmount -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#CededPolicyAmount">
+        <rdfs:subClassOf rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#PolicyAmount"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#ChannelScore -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#ChannelScore">
+        <rdfs:subClassOf rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#AssessmentResult"/>
+        <rdfs:comment xml:lang="en">A kind of Assessment Result that indicates the relative success of the channel in marketing and servicing products and services on behalf of the insurer.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#CitroenModels -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#CitroenModels">
+        <rdfs:subClassOf rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#AutomobileModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#Claim -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Claim">
+        <rdfs:comment xml:lang="en">A Claim is a request for indemnification by an insurance company.  Claim is tied to Party, Insurable Object, Policy Coverage Detail, and Reinsurance, and is the major link point for claim settlement services.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#ClaimAmount -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#ClaimAmount">
+        <rdfs:subClassOf rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Money"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#ClaimDocument -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#ClaimDocument"/>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#ClaimEvaluationResult -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#ClaimEvaluationResult">
+        <rdfs:subClassOf rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#AssessmentResult"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#ClaimExpense -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#ClaimExpense">
+        <rdfs:subClassOf rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#ClaimAmount"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#ClaimFolder -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#ClaimFolder"/>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#ClaimFraudAssessment -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#ClaimFraudAssessment">
+        <rdfs:subClassOf rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#AssessmentResult"/>
+        <rdfs:comment xml:lang="en">A kind of Assessment Result based upon the evaluation of an action by which a person intentionally uses false information in an unfair or unlawful attempt to collect benefits (payments?) under an insurance policy.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#ClaimOffer -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#ClaimOffer"/>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#ClaimPartyRole -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#ClaimPartyRole"/>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#ClaimPayment -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#ClaimPayment">
+        <rdfs:subClassOf rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#ClaimAmount"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#ClaimReserve -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#ClaimReserve">
+        <rdfs:subClassOf rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#ClaimAmount"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#ClaimRole -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#ClaimRole">
+        <rdfs:subClassOf rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#PartyRole"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#Communication -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Communication">
+        <rdfs:comment xml:lang="en">Communication Identity provides contact information specifications that should be utilized for communicating with a party. It specifies:  communication channel (physical address, email, phone, facebook), usage type (home, work, mobile/landline), contact value (assigned phone number, email address, site address) , communication preference (contact through email, call evenings, mail to home address) and contact information ranking (1,2, 3).  The Communication entity and its relationships permit all contact information and preferences to be established for all types of parties.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#ConstructionVehicle -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#ConstructionVehicle">
+        <rdfs:subClassOf rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Vehicle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#Coverage -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Coverage">
+        <rdfs:comment xml:lang="en">Coverage is protection under an insurance policy or claim service agreement.  The Coverage Entity provides for managing the master list of coverages available from a company.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#CreditClaimAmount -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#CreditClaimAmount">
+        <rdfs:subClassOf rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#ClaimAmount"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#CreditPolicyAmount -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#CreditPolicyAmount">
+        <rdfs:subClassOf rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#PolicyAmount"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#CreditRating -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#CreditRating">
+        <rdfs:subClassOf rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#AssessmentResult"/>
+        <rdfs:comment xml:lang="en">Acceptability of the party for credit transactions (including good, fair and cash only).  The rating is normally applied by credit rating agencies or credit granting financial institutions.  This is one characteristic that can be used to assess the financial and operational risk represented by an entity requesting indemnification.   </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#CustomerScore -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#CustomerScore">
+        <rdfs:subClassOf rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#AssessmentResult"/>
+        <rdfs:comment xml:lang="en">A kind of Assessment Result that assigns points to each customer based on specific criteria in order to be able to rank order customers against the dependent variable measured by that criteria.  Examples of dependent variables are expected loss ratio, expected loss severity, propensity for a catastrophic event, etc.  </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#DebitClaimAmount -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#DebitClaimAmount">
+        <rdfs:subClassOf rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#ClaimAmount"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#DebitPolicyAmount -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#DebitPolicyAmount">
+        <rdfs:subClassOf rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#PolicyAmount"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#DeductibleRecovery -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#DeductibleRecovery">
+        <rdfs:subClassOf rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Recovery"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#DemographicScore -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#DemographicScore">
+        <rdfs:subClassOf rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#AssessmentResult"/>
+        <rdfs:comment xml:lang="en">An Assessment Result that is used to rank orders risks or individuals based on a table of points assigned to pre-identified demographic characteristics of the risk or individual.  </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#DirectClaimAmount -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#DirectClaimAmount">
+        <rdfs:subClassOf rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#ClaimAmount"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#DirectPolicyAmount -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#DirectPolicyAmount">
+        <rdfs:subClassOf rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#PolicyAmount"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#Event -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Event">
+        <rdfs:comment xml:lang="en">Anything that happens, or is contemplated as happening.  From an insurance perspective, an event is a situation that may impact the risk or indemnification covered by a policy.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#Fee -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Fee">
+        <rdfs:subClassOf rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#PolicyAmount"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#FinancialInterestRole -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#FinancialInterestRole">
+        <rdfs:subClassOf rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#PartyRole"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#FinancialServicesAssessment -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#FinancialServicesAssessment">
+        <rdfs:subClassOf rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#AssessmentResult"/>
+        <rdfs:comment xml:lang="en">A kind of Assessment Result that focuses on the finances of the coverage.   An assessment done on an individual or organization based on pre-defined characteristics that identify the financial or monetary risks represented by the firm.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#FinancialValuation -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#FinancialValuation">
+        <rdfs:subClassOf rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#AssessmentResult"/>
+        <rdfs:comment xml:lang="en">An assessment result expressed in financial units.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#FordModels -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#FordModels">
+        <rdfs:subClassOf rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#AutomobileModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#FraudRisk -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#FraudRisk">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:complementOf>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#settlementResultsIn"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                    </owl:Restriction>
+                </owl:complementOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#claimAssessment"/>
+                <owl:someValuesFrom rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#ResultsInFraud"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#GeographicLocation -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#GeographicLocation">
+        <rdfs:comment xml:lang="en">A Geographic Location is a bounded area defined by nature, by an external authority (such as a government) or for an internal business purpose. Used to identify a location in space that is not a structured address, for example: country, city, continent, postal area, risk area.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#Group -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Group">
+        <rdfs:subClassOf rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Party"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#InsurableObject -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#InsurableObject">
+        <rdfs:comment xml:lang="en">An Insurable Object is an item figuring in an insurance coverage or policy, either as the object for which possible damages to the object or loss of the object is insured, or as the object for which damages caused by the object are insured.  Examples: residence, vehicle, class of employees.  In the data model, Insurable Objects are defined with respect to their interested parties and can therefore be referenced by multiple agreements.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#InsuranceCompany -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#InsuranceCompany">
+        <rdfs:subClassOf rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#LocationAddress -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#LocationAddress">
+        <rdfs:comment xml:lang="en">Postal Address is a Contact Point that is an address used for the delivery of letters and packages. These addresses can and should be conceived and implemented as master data.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#MedicalCondition -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#MedicalCondition">
+        <rdfs:subClassOf rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#AssessmentResult"/>
+        <rdfs:comment xml:lang="en">The health state of a person which may be covered or indemnified by an insurance policy, such as an injury, a disease or a disability.
+Medical Condition is an assessment of the physical condition and health of a Person.  Discrete results of portions of a Medical assessment are recorded as objective measurements such as height, weight, and blood pressure.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#Money -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Money">
+        <rdfs:comment xml:lang="en">Money is a common entity at the conceptual level to emphasis the importance of common management of financial amounts.  In the Logical Data Model, Money s defined in Policy Amount and Claim Amount entities.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#Motorcycle -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Motorcycle">
+        <rdfs:subClassOf rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Vehicle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#Organization -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Organization">
+        <rdfs:subClassOf rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Party"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#OtherAssessmentResult -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#OtherAssessmentResult">
+        <rdfs:subClassOf rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#AssessmentResult"/>
+        <rdfs:comment xml:lang="en">Other Assessment Result is a kind of Assessment Result that is not covered by other commonly listed options available.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#Party -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Party">
+        <rdfs:comment xml:lang="en">A Party is a Person, Organization, or Group playing a role in the insurance industry. In the data model, Party is a major entity that relates to almost all the other major entities as it defines how people, organizations, and groups are involved in the insurance and financial services business involving agreements, policies, claims, insurable objects, etc.  With the use of party, many other data requirements can be made common and managed more efficiently.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#PartyRole -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#PartyRole">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#Person -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Person">
+        <rdfs:subClassOf rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Party"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#PhysicalObjectAssessment -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#PhysicalObjectAssessment">
+        <rdfs:subClassOf rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#AssessmentResult"/>
+        <rdfs:comment xml:lang="en">An assessment type that measures the risks represented by ownership, utilization or proximity of the physical object.  It collects information regarding the likelihood of the object to contribute to the probability of future loss under an insurance policy or contract issued.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#PlaceAssessment -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#PlaceAssessment">
+        <rdfs:subClassOf rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#AssessmentResult"/>
+        <rdfs:comment xml:lang="en">An Assessment Result that collects information regarding a location and/or physical structure that may impact its likelihood to contribute to the probability of future events that may increase the risk under an insurance policy or contract issued. </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#Policy -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Policy">
+        <rdfs:subClassOf rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Agreement"/>
+        <rdfs:comment xml:lang="en">A Policy is a kind of written Agreement that puts insurance coverage into effect.    Policy is the major feature for this release of the data model as many of the remaining major objects are related to it.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#PolicyAmount -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#PolicyAmount">
+        <rdfs:subClassOf rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Money"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#PolicyCoverageDetail -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#PolicyCoverageDetail">
+        <rdfs:comment xml:lang="en">Policy Coverage Detail defines the coverages included in an insurance policy (refer to Coverage definition).  It is a key link in the data model among Policy, Claim, and Reinsurance.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#PolicyDeductible -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#PolicyDeductible">
+        <rdfs:comment xml:lang="en">This is the money representing the part of a loss amount that the insured is required to pay before any indemnification payment is provided by the insurance company.  It is a key feature of an insurance policy.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#PolicyLimit -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#PolicyLimit">
+        <rdfs:comment xml:lang="en">This is the maximum amount or benefit afforded for a given policy and coverage.  It is a key feature of an insurance policy.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#Premium -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Premium">
+        <rdfs:subClassOf rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#PolicyAmount"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#Product -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Product">
+        <rdfs:comment xml:lang="en">Product is the kind of item that is for sale, and in this model, it the category of insurance of financial service agreement that can be sold.  Example for insurance:  Commercial Multi-Peril Policy, Homeowners Policy, etc.  In the data model, provision is made for a company to define its products as master reference data.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#ProductCoverage -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#ProductCoverage">
+        <rdfs:comment xml:lang="en">Product Coverage defines a company&apos;s coverages available for each of its products and should be managed as master reference data.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#Recovery -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Recovery">
+        <rdfs:subClassOf rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#ClaimAmount"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#RecreationalVehicle -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#RecreationalVehicle">
+        <rdfs:subClassOf rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Vehicle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#ReinsuranceAgreement -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#ReinsuranceAgreement">
+        <rdfs:subClassOf rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Agreement"/>
+        <rdfs:comment xml:lang="en">Reinsurance Agreement is a kind of Agreement between the Reinsurer and the Ceding Company that stipulates the manner in which the insurance liability in the writing company&apos;s policy is to be shared.  This is similar to a policy concept with very specialized provisions and concepts.  Like Policy, the reinsurance agreement connects with the claim through Coverage.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#ReinsuranceCoverage -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#ReinsuranceCoverage">
+        <rdfs:comment xml:lang="en">Reinsurance Coverage identifies the specific provisions of the reinsurance agreement and is managed similar to the Policy Coverage.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#ReinsuranceRecovery -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#ReinsuranceRecovery">
+        <rdfs:subClassOf rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Recovery"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#RenaultModels -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#RenaultModels">
+        <rdfs:subClassOf rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#AutomobileModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#ResultsInFraud -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#ResultsInFraud">
+        <rdfs:subClassOf rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Assessment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#ResultsInFraudAssessment -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#ResultsInFraudAssessment">
+        <rdfs:subClassOf rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Claim"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#RiskFactorScore -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#RiskFactorScore">
+        <rdfs:subClassOf rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#AssessmentResult"/>
+        <rdfs:comment xml:lang="en">A kind of Assessment Result that evaluates and ranks orders the contribution a common factor has on the underlying Insurable Object.  The different properties of the factor are given different scores based on their contribution to the risk being insured against.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#Salvage -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Salvage">
+        <rdfs:subClassOf rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Recovery"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#Subrogation -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Subrogation">
+        <rdfs:subClassOf rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Recovery"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#Surcharge -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Surcharge">
+        <rdfs:subClassOf rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#PolicyAmount"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#Tax -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Tax">
+        <rdfs:subClassOf rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#PolicyAmount"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#Trailer -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Trailer">
+        <rdfs:subClassOf rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Vehicle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#Truck -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Truck">
+        <rdfs:subClassOf rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Vehicle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#UnderwritingAssessment -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#UnderwritingAssessment">
+        <rdfs:subClassOf rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#AssessmentResult"/>
+        <rdfs:comment xml:lang="en">The evaluations provided by Underwriters who are reviewing the proposed new or renewal policy to determine their willingness to accept the risk. Items they might evaluate are the limits of insurance being requested, the demographics of the location, the demographics of the requestor, the condition of the Insurable Object, etc.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#Van -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Van">
+        <rdfs:subClassOf rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Vehicle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#Vehicle -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Vehicle">
+        <rdfs:subClassOf rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#InsurableObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#Watercraft -->
+
+    <owl:Class rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Watercraft">
+        <rdfs:subClassOf rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Vehicle"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#Accident_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Accident_1">
+        <rdf:type rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Event"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#Agreement_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Agreement_1">
+        <rdf:type rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Policy"/>
+        <isInsuranceOf rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Vehicle_1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#Alfa_Romeo -->
+
+    <owl:NamedIndividual rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Alfa_Romeo">
+        <rdf:type rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#AutomobileManufacturer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#Assesment_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Assesment_1">
+        <rdf:type rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Assessment"/>
+        <rdf:type rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#ResultsInFraud"/>
+        <resultsIn rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#fraud_1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#AssessmentResult_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hpclab.ceid.upatras.gr/omg#AssessmentResult_1"/>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#Audi -->
+
+    <owl:NamedIndividual rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Audi">
+        <rdf:type rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#AutomobileManufacturer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#BMW -->
+
+    <owl:NamedIndividual rdf:about="http://www.hpclab.ceid.upatras.gr/omg#BMW">
+        <rdf:type rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#AutomobileManufacturer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#BMW_i3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hpclab.ceid.upatras.gr/omg#BMW_i3">
+        <rdf:type rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#AutomobileModel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#Citroen -->
+
+    <owl:NamedIndividual rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Citroen">
+        <rdf:type rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#AutomobileManufacturer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#ClaimDocument_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hpclab.ceid.upatras.gr/omg#ClaimDocument_1">
+        <rdf:type rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#ClaimDocument"/>
+        <documentID>DocID_1</documentID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#ClaimDocument_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hpclab.ceid.upatras.gr/omg#ClaimDocument_2">
+        <rdf:type rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#ClaimDocument"/>
+        <documentID>DocID_2</documentID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#ClaimExaminer -->
+
+    <owl:NamedIndividual rdf:about="http://www.hpclab.ceid.upatras.gr/omg#ClaimExaminer">
+        <rdf:type rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#ClaimRole"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#ClaimExpert -->
+
+    <owl:NamedIndividual rdf:about="http://www.hpclab.ceid.upatras.gr/omg#ClaimExpert">
+        <rdf:type rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#ClaimRole"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#ClaimFolder_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hpclab.ceid.upatras.gr/omg#ClaimFolder_1">
+        <rdf:type rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#ClaimFolder"/>
+        <contains rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#ClaimDocument_1"/>
+        <contains rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#ClaimDocument_2"/>
+        <folderID>FOLDER1</folderID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#ClaimFraudExaminer -->
+
+    <owl:NamedIndividual rdf:about="http://www.hpclab.ceid.upatras.gr/omg#ClaimFraudExaminer">
+        <rdf:type rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#ClaimRole"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#Claim_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Claim_1">
+        <rdf:type rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Claim"/>
+        <claimAssessment rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Assesment_1"/>
+        <documentedIn rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#ClaimFolder_1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#Claim_6534527_4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Claim_6534527_4">
+        <rdf:type rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Claim"/>
+        <claimAssessment rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Assesment_1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#CreditPolicyAmount -->
+
+    <owl:NamedIndividual rdf:about="http://www.hpclab.ceid.upatras.gr/omg#CreditPolicyAmount"/>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#DebitPolicyAmount -->
+
+    <owl:NamedIndividual rdf:about="http://www.hpclab.ceid.upatras.gr/omg#DebitPolicyAmount"/>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#Driver -->
+
+    <owl:NamedIndividual rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Driver">
+        <rdf:type rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#ClaimRole"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#Fee -->
+
+    <owl:NamedIndividual rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Fee"/>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#Focus -->
+
+    <owl:NamedIndividual rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Focus">
+        <rdf:type rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#FordModels"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#Focus_C-MAX -->
+
+    <owl:NamedIndividual rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Focus_C-MAX">
+        <rdf:type rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#FordModels"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#Focus_C-MAX_Diesel -->
+
+    <owl:NamedIndividual rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Focus_C-MAX_Diesel">
+        <rdf:type rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#FordModels"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#Focus_CC -->
+
+    <owl:NamedIndividual rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Focus_CC">
+        <rdf:type rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#FordModels"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#Focus_Diesel -->
+
+    <owl:NamedIndividual rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Focus_Diesel">
+        <rdf:type rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#FordModels"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#Ford -->
+
+    <owl:NamedIndividual rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Ford">
+        <rdf:type rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#AutomobileManufacturer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#InsurableObjectOwner -->
+
+    <owl:NamedIndividual rdf:about="http://www.hpclab.ceid.upatras.gr/omg#InsurableObjectOwner">
+        <rdf:type rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#AccountRole"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#Insurer -->
+
+    <owl:NamedIndividual rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Insurer">
+        <rdf:type rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#FinancialInterestRole"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#Interamerican -->
+
+    <owl:NamedIndividual rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Interamerican">
+        <rdf:type rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#InsuranceCompany"/>
+        <organizationCode>67890</organizationCode>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#Mercedes_Benz -->
+
+    <owl:NamedIndividual rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Mercedes_Benz">
+        <rdf:type rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#AutomobileManufacturer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#Opel -->
+
+    <owl:NamedIndividual rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Opel">
+        <rdf:type rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#AutomobileManufacturer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#Person_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Person_1">
+        <rdf:type rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Person"/>
+        <hasInsured rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Agreement_1"/>
+        <hasRole rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Insurer"/>
+        <isEmployedBy rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Interamerican"/>
+        <personFirstName xml:lang="en">Dimitrios</personFirstName>
+        <personID xml:lang="en">yui567890</personID>
+        <personLastName xml:lang="en">Koutsomitropoulos</personLastName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#Person_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Person_2">
+        <rdf:type rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Person"/>
+        <claimRoleInvolvedIn rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Claim_1"/>
+        <hasRole rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Driver"/>
+        <hasRole rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#InsurableObjectOwner"/>
+        <isOwnerOf rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Vehicle_1"/>
+        <personFirstName>Katerina</personFirstName>
+        <personID>  ω787063</personID>
+        <personLastName>Kalou</personLastName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#Person_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Person_3">
+        <rdf:type rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Person"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#Person_4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Person_4">
+        <rdf:type rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Person"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#Person_5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Person_5">
+        <rdf:type rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Person"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#Premium -->
+
+    <owl:NamedIndividual rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Premium"/>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#Renault -->
+
+    <owl:NamedIndividual rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Renault">
+        <rdf:type rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#AutomobileManufacturer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#Surcharge -->
+
+    <owl:NamedIndividual rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Surcharge"/>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#Tax -->
+
+    <owl:NamedIndividual rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Tax"/>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#Vehicle_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Vehicle_1">
+        <rdf:type rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Automobile"/>
+        <hasInsurance rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Agreement_1"/>
+        <hasModel rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Focus_Diesel"/>
+        <involvedIn rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Claim_1"/>
+        <automobileCountryCode>GR</automobileCountryCode>
+        <automobileNumber>IZN7803</automobileNumber>
+        <productionDate>2006</productionDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#Vehicle_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Vehicle_2">
+        <rdf:type rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#Automobile"/>
+        <hasModel rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#BMW_i3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hpclab.ceid.upatras.gr/omg#fraud_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hpclab.ceid.upatras.gr/omg#fraud_1">
+        <rdf:type rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#ClaimFraudAssessment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#settlementResultsIn"/>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf rdf:resource="http://www.hpclab.ceid.upatras.gr/omg#AlreadySettled"/>
+    </owl:Restriction>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Automobile"/>
+            <rdf:Description rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Boat"/>
+            <rdf:Description rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Bus"/>
+            <rdf:Description rdf:about="http://www.hpclab.ceid.upatras.gr/omg#ConstructionVehicle"/>
+            <rdf:Description rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Motorcycle"/>
+            <rdf:Description rdf:about="http://www.hpclab.ceid.upatras.gr/omg#RecreationalVehicle"/>
+            <rdf:Description rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Trailer"/>
+            <rdf:Description rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Truck"/>
+            <rdf:Description rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Van"/>
+            <rdf:Description rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Watercraft"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.hpclab.ceid.upatras.gr/omg#BMWModels"/>
+            <rdf:Description rdf:about="http://www.hpclab.ceid.upatras.gr/omg#CitroenModels"/>
+            <rdf:Description rdf:about="http://www.hpclab.ceid.upatras.gr/omg#FordModels"/>
+            <rdf:Description rdf:about="http://www.hpclab.ceid.upatras.gr/omg#RenaultModels"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Group"/>
+            <rdf:Description rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Organization"/>
+            <rdf:Description rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Person"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Focus"/>
+            <rdf:Description rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Focus_C-MAX"/>
+            <rdf:Description rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Focus_C-MAX_Diesel"/>
+            <rdf:Description rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Focus_CC"/>
+            <rdf:Description rdf:about="http://www.hpclab.ceid.upatras.gr/omg#Focus_Diesel"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.10) https://github.com/owlcs/owlapi -->
+
